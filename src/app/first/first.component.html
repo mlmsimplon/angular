@@ -1,0 +1,12 @@
+<li     [ngClass]="{'list-group-item': true, 
+                    'list-group-item-succes': componentStatus === 'Validé',
+                    'list-group-item-danger': componentStatus === 'Good', 
+                    'list-group-item-primary': componentStatus === 'En cours'}">
+
+        <div style="width:20px;height:20px;background-color:red;"
+        *ngIf="componentStatus === 'Validé'"></div>
+        <h3 [ngStyle]="{color: getColor()}"> Statut :  {{ getStatus() }}> </h3>
+        <h3 [ngStyle]="{color: getColor()}"> This is : {{ componentName }} --> Statut :{{ getStatus() }}</h3>
+</li>
+   
+
